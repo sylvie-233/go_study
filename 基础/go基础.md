@@ -37,6 +37,10 @@ go命令:
     	-w: 设置环境变量
     get:
     	-u:
+    install:
+    mod:
+    	init:
+    	tidy:
     run: 运行
 	version: 版本
 	
@@ -113,6 +117,10 @@ string字符串
 
 
 
+map
+
+
+
 ### 常量
 
 const定义
@@ -140,8 +148,10 @@ iota常量计数，从0开始
 	func:
 	int:
 	int64:
+	nil:
 	range:
 	rune:
+	select:
 	string:
 	uint8:
 	uintptr:
@@ -235,6 +245,10 @@ type Slice[T int | float32] []T
 
 
 
+### Goroutine协程
+
+
+
 
 
 
@@ -272,18 +286,77 @@ bufio:
 
 ```
 builtin内建:
+	append():
+	close():
+	delete():
 	len():
+	make():
+	panic():
+	recover():
 ```
 
 
 
+### bytes
+
+```
+bytes:
+	NewBuffer():
+	NewReader():
+```
+
+
+
+#### Reader
+
+```
+Reader:
+	
+```
+
+
+
+
+
+
+
+### context
+
+```
+context:
+```
+
+
+
+
+
 ### encoding
+
+#### binary
+
+```
+binary:
+	LittleEndian:
+	Read():
+	Write():
+```
+
+
 
 #### json
 
 ```
 json:
 	Unmarshal():
+```
+
+
+
+### errors
+
+```
+errors:
+	New():
 ```
 
 
@@ -303,11 +376,44 @@ fmt:
 	Scan():
 	Scanf():
 	Scanln():
+	Sprintf():
 ```
 
 
 
-### net
+### io
+
+```
+io:
+	ReadFull():
+```
+
+
+
+#### ioutil
+
+```
+ioutil:
+	ReadFile():
+```
+
+
+
+
+
+### net 
+
+```
+net:
+	Dial():
+	Listen():
+	ListenTCP():
+	ResolveTCPAddr():
+```
+
+
+
+
 
 #### http
 
@@ -319,6 +425,48 @@ http:
 
 
 
+#### TCPAddr
+
+```
+TCPAddr:
+	
+```
+
+
+
+#### TCPConn
+
+```
+TCPConn:
+	Close():
+	Read():
+	Write(): 
+```
+
+
+
+
+
+#### TCPListener
+
+```
+TCPListener:
+	AcceptTCP():
+```
+
+
+
+
+
+### log
+
+```
+log:
+	Fatalf():
+```
+
+
+
 
 
 ### os
@@ -326,6 +474,59 @@ http:
 ```
 os:
 	
+```
+
+
+
+### sync
+
+```
+sync:
+	RWMutex:
+```
+
+
+
+#### RWMutex
+
+```
+RWMutex:
+	Lock():
+	RLock():
+	RUnlock():
+	Unlock():
+```
+
+
+
+
+
+### testing
+
+```
+testing:
+	T
+```
+
+
+
+#### T
+
+```
+T:
+	
+```
+
+
+
+
+
+### time
+
+```
+time:
+	Second:
+	Sleep():
 ```
 
 
