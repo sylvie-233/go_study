@@ -4,7 +4,7 @@
 >
 > Date: 22/12/26
 > Point:	
-> 	【golang-web开发】gin框架手把手教学：P12
+> 	【golang-web开发】gin框架手把手教学：P25
 
 ## 基础介绍
 
@@ -13,7 +13,7 @@ Gin、Beego、Iris
 安装
 
 ```
-"github.com/gin-gonic/gin"
+go get -u "github.com/gin-gonic/gin"
 ```
 
 
@@ -22,24 +22,36 @@ Gin、Beego、Iris
 ```
 gin:
 	Context:
-		Abort():
+		Request: 
+		Writer:
+		Abort(): 中断处理
 		DefaultPostForm():
 		DefaultQuery():
+		File(): 响应文件数据
+		FormFile(): 文件获取
+		Get(): 请求域获取值
 		GetHeader(): 获取请求头
 		GetQuery():
 		GetRawData(): 获取原始请求体
+		Group(): 路由分组
+		Header(): 响应头
 		HTML(): 响应HTML数据
 		JSON(): 返回JSON数据
 		MultipartForm(): 可获取文件数据
 		MustGet():
-		Next():
+		Next(): 请求链式放行
 		Param(): 获取param参数
 		PostForm(): 获取表单参数
 		Query(): 获取query参数
 		QueryArray():
 		QueryMap():
 		Redirect(): 重定向 
-		Set():
+		SaveUploadedFile(): 保存上传文件
+		Set(): 请求域设置值
+		ShouldBind(): 根据请求头类型获取参数
+		ShouldBindJSON(): 参数绑定校验
+		ShouldBindQuery():
+		ShouldBindUri(): 
 		String(): 返回字符串数据
 		XML(): 返回XML数据
 		YAML(): 响应YAML数据
@@ -57,7 +69,7 @@ gin:
 		Run(): 框架运行
 		StaticFile(): 配置静态文件挂载
 		StaticFS(): 配置静态目录挂载
-		Use():
+		Use(): 全局中间件注册
 	H: （本质是一个map[string]any）
 	HandlerFunc:
 	HandlersChain:
@@ -69,14 +81,42 @@ gin:
 	ResponseWriter:
 	RouteInfo:
 	RouterGroup:
+		GET():
+		POST():
+		Use(): 使用中间件
 	RoutesInfo:
+binding:
+	Validator:
+		Engine():
+validator:
+	FieldLevel:
+		Field():	
+	Validate:
+		RegisterValidation(): 注册校验器
+	ValidationErrors:
+	Default(): 生成Engine
+	Logger(): gin默认日志中间件
+	New(): 生成Engine
+	Recovery(): gin默认错误恢复中间件
 ```
 
 框架结构类似koa2
 
+Default()生成的Engine默认注册了Logger()、Recovery()两个中间件
 
 
 
+
+
+
+
+
+### 路由
+
+
+
+
+### 中间件
 
 
 
@@ -89,10 +129,45 @@ gin:
 
 
 
+### 参数校验
+
+参数绑定和校验
+
+支持json、form、uri、
+
+#### binding
+```
+binding:
+	contains:
+	datetime:
+	dive:
+	endswith:
+	eq:
+	eqfield:
+	excludes:
+	ip:
+	len:
+	max:
+	min:
+	ne:
+	nefield:
+	oneof: 枚举判断
+	required:
+	startswith:
+	uri:
+	url:
+		msg: 错误信息
+```
 
 
 
+##### 自定义校验
 
+```
+func 校验函数（v validator.FieldLevel) bool {
+	
+}
+```
 
 
 
@@ -201,6 +276,16 @@ gorm:
 	Session:
 	Tx:
 	Open():
+casbin:
+	persist:
+		NewDBAdaper():
+	util:
+		RegexMatch():
+	Enforcer:
+		AddPolicy():
+		Enforce(): 判断是否允许访问
+		SavePolicy():
+	NewEnforcer(): 创建一个casbin模型
 ```
 
 
@@ -301,3 +386,53 @@ type User struct {
 
 ###### Many To Many
 
+
+
+### Casbin
+
+ACL、RBAC
+subject、object、action
+访问控制模型model、策略policy
+model.conf、policy.csv（实际的权限控制列表）
+
+
+PERM模型（Policy, Effect, Request, Matchers）
+- Policy：定义权限的规则
+- Effect：定义组合了多个Policy之后的结果
+- Requset：访问请求
+- Matcher：判断Request是否满足Policy
+
+
+
+casbin默认支持文件存储访问控制策略，可使用adapter适配数据库存储
+所有操作都是基于访问控制模型model
+
+
+
+
+
+#### model.conf
+
+```
+```text
+request_definition]
+r = sub, obj, act
+
+[policy_definition]
+p = sub, obj, act
+
+[role_definition]
+g = _, _
+
+[policy_effect]
+e = some(where (p.eft == allow))
+
+[matchers]
+m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
+```
+
+- request_definition：表示访问控制请求的定义，包括sub（访问者）、obj（资源）和act（请求动作）。
+- policy_definition：表示访问控制策略的定义，包括sub（访问者）、obj（资源）和act（请求动作）。
+- role_definition：表示角色的定义。
+- policy_effect：表示策略生效的条件。
+- matchers：表示匹配器，用于判断是否满足规则。

@@ -306,11 +306,24 @@ main包：可执行程序
 	io:
 		fs:
 		ioutil:
+		Copy():
+		ReadAll():
 	log:
 		slog:
 		syslog:
 	maps:
 	math:
+	mime:
+		multipart:
+			File:
+				Close():
+				ReadAll():
+			FileHeader:
+				Filename:
+				Size:
+				Open():
+			Form:
+				File:
 	net:
 		http:
 		rpc:
@@ -319,6 +332,7 @@ main包：可执行程序
 		exec:
 		signal:
 		user:
+		Create():
 	path:
 		filepath:
 	reflect:
