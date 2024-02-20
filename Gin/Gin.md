@@ -25,6 +25,7 @@ gin:
 		Request: 
 		Writer:
 		Abort(): 中断处理
+		ClientIP():
 		DefaultPostForm():
 		DefaultQuery():
 		File(): 响应文件数据
@@ -46,6 +47,7 @@ gin:
 		QueryArray():
 		QueryMap():
 		Redirect(): 重定向 
+		Routes(): 
 		SaveUploadedFile(): 保存上传文件
 		Set(): 请求域设置值
 		ShouldBind(): 根据请求头类型获取参数
@@ -55,6 +57,8 @@ gin:
 		String(): 返回字符串数据
 		XML(): 返回XML数据
 		YAML(): 响应YAML数据
+	DefaultPrintRouteFunc:
+	DefaultWriter:
 	Error:
 	Engine: 引擎（继承RouterGroup）
 		Default():
@@ -62,7 +66,6 @@ gin:
 		Handle(): 路由处理函数
 		LoadHTMLFiles(): 加载html文件
 		LoadHTMLGlob(): 
-		New():
 		NoRoute():
 		POST(): post路由注册
 		Routes():
@@ -76,15 +79,37 @@ gin:
 	IRouter:
 	Iroutes:
 	LogFromatter:
+	LogFromatterParams:
+		ErrorMessage:
+		Method:  
+		Path:
+		StatusCode:
+		TimeStamp:
+		MethodColor():
+		ResetColor():
+		StatusCodeColor():
 	LoggerConfig:
+		Formatter:
+		Output:
+		SkipPaths:
 	Param:
+	ReleaseMod:
 	ResponseWriter:
 	RouteInfo:
+		Handler:
+		HandlerFunc:
+		Method:
+		Path:
 	RouterGroup:
 		GET():
 		POST():
 		Use(): 使用中间件
 	RoutesInfo:
+	Default():
+	LoggerWithConfig():
+	LoggerWithFormatter(): 日志中间件生成
+	New():
+	SetMode():
 binding:
 	Validator:
 		Engine():
@@ -286,6 +311,41 @@ casbin:
 		Enforce(): 判断是否允许访问
 		SavePolicy():
 	NewEnforcer(): 创建一个casbin模型
+logrus:
+	Entry: 重要传参
+		Buffer:
+		Caller:
+			File:
+			Function:
+			Line:
+		Data: 用来传递数据的map
+		Level:
+		String():
+		WithField():
+		WithFields():
+		 
+	ErrorLevel:
+	Hook:
+		Fire(): 真正执行的地方
+		Levels():
+	JSONFormatter:
+	Level:
+	TextFormatter:
+		ForceColors:
+		FullTimestamp:
+		TimestampFormat:
+	WarnLevel:
+	AddHook():
+	Debugf():
+	Error():
+	GetLevel():
+	Infof():
+	SetFormatter():
+	SetLevel():
+	SetOutput():
+	SetReportCaller():
+	WithField(): 设置字段值
+	Wranln():
 ```
 
 
@@ -436,3 +496,16 @@ m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
 - role_definition：表示角色的定义。
 - policy_effect：表示策略生效的条件。
 - matchers：表示匹配器，用于判断是否满足规则。
+
+
+
+
+### logrus
+
+#### Formatter
+
+
+#### Hook
+
+
+
