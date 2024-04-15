@@ -5,7 +5,7 @@
 > Date: 22/12/26
 >
 > Point：
-
+> 	
 
 
 ## 基础介绍
@@ -33,6 +33,8 @@ GoLand开发工具
 ```
 go命令:
 	build:
+	clean:
+		-modcache: 模块缓存
     env: 环境变量
     	-w: 设置环境变量
     get:
@@ -272,6 +274,104 @@ main包：可执行程序
 
 
 ## 标准库
+```
+:
+	archive:
+	bufio:
+	builtin:
+		append():
+		string():
+	bytes:
+	cmp:
+	compress:
+	comtainer:
+		heap:
+		list:
+		ring:
+	context:
+	crypto:
+	database:
+		sql:
+			driver:
+	debug:
+	encoding:
+		json:
+			Marshal():
+			Unmarshal():
+	errors:
+	fmt:
+	hash:
+	html:
+	image:
+	io:
+		fs:
+		ioutil:
+		Copy():
+		ReadAll():
+	log:
+		slog:
+		syslog:
+	maps:
+	math:
+	mime:
+		multipart:
+			File:
+				Close():
+				ReadAll():
+			FileHeader:
+				Filename:
+				Size:
+				Open():
+			Form:
+				File:
+	net:
+		http:
+		rpc:
+		url:
+	os:
+		exec:
+		signal:
+		user:
+		Create():
+	path:
+		filepath:
+	reflect:
+		Ptr:
+		Struct:
+		StructField:
+			Anonymous:
+			Name:
+			Offset:
+			Tag: tag标签
+			Type:
+			IsExported():
+		StructTag:
+			Get():
+		Type:
+			Elem(): 指针取值
+			Kind():
+			NumField():
+		TypeOf():
+	regexp:
+		syntax:
+	runtime:
+	sort:
+	strings:
+		Join():
+	sync:
+		atomic:
+	testing:
+		fstest:
+		iotest:
+		quick:
+	text:
+		scanner:
+		template:
+	time:
+	unsafe:
+```
+
+
 
 ```
 标准库:
