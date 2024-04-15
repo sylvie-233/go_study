@@ -279,7 +279,11 @@ main包：可执行程序
 	archive:
 	bufio:
 	builtin:
-		append():
+		append(): 添加元素（切片扩容）
+		cap(): 容量
+		copy(): 拷贝
+		len(): 长度
+		make(): 引用内存分配
 		string():
 	bytes:
 	cmp:
@@ -300,6 +304,8 @@ main包：可执行程序
 			Unmarshal():
 	errors:
 	fmt:
+		Print():
+		Println():
 	hash:
 	html:
 	image:
@@ -370,17 +376,6 @@ main包：可执行程序
 	time:
 	unsafe:
 ```
-
-
-
-```
-标准库:
-	builtin:
-		cap(): 容量
-		len(): 长度
-	fmt:
-```
-
 
 
 ### bufio
