@@ -275,12 +275,13 @@ main包：可执行程序
 
 ## 标准库
 ```
-:
+go standard:
 	archive:
 	bufio:
 	builtin:
 		append(): 添加元素（切片扩容）
 		cap(): 容量
+		close(): 关闭
 		copy(): 拷贝
 		len(): 长度
 		make(): 引用内存分配
@@ -303,6 +304,8 @@ main包：可执行程序
 			Marshal():
 			Unmarshal():
 	errors:
+		Is(): 错误判断
+		New(): 新建错误
 	fmt:
 		Print():
 		Println():
@@ -311,6 +314,13 @@ main包：可执行程序
 	image:
 	io:
 		fs:
+			DirEntry:
+				Name():
+				Info():
+			FileInfo:
+				IsDir():
+				Size():
+			WalkDirFunc:
 		ioutil:
 		Copy():
 		ReadAll():
@@ -338,9 +348,15 @@ main包：可执行程序
 		exec:
 		signal:
 		user:
+		File:
+			
 		Create():
+		Open():
+		ReadDir():
 	path:
 		filepath:
+			Walk():
+			WalkDir():
 	reflect:
 		Ptr:
 		Struct:
@@ -366,6 +382,13 @@ main包：可执行程序
 		Join():
 	sync:
 		atomic:
+		Mutex:
+			Lock():
+			Unlock():
+		RWMutex:
+		WaitGroup:
+			Down():
+			Wait():
 	testing:
 		fstest:
 		iotest:
@@ -374,7 +397,10 @@ main包：可执行程序
 		scanner:
 		template:
 	time:
+		After():
+		Now():
 	unsafe:
+		Sizeof():
 ```
 
 

@@ -147,8 +147,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "87adef3d3312a4b1",
+  "active": "4b8febe550e7b8d0",
   "lastOpenFiles": [
-    "Gin/Gin.md"
+    "Gin/Gin.md",
+    "基础/go.md"
   ]
 }
