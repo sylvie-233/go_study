@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f5bfaa1181aa2a94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第三方库/Excelize.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c951232536f1d94b",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础/go.md",
+                "file": "第三方库/Excelize.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "基础/go.md",
+                "file": "第三方库/Excelize.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础/go.md"
+                "file": "第三方库/Excelize.md"
               }
             }
           }
@@ -149,7 +161,9 @@
   },
   "active": "4b8febe550e7b8d0",
   "lastOpenFiles": [
-    "Gin/Gin.md",
-    "基础/go.md"
+    "第三方库/Xorm.md",
+    "第三方库/Excelize.md",
+    "基础/go.md",
+    "Gin/Gin.md"
   ]
 }
