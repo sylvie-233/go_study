@@ -278,6 +278,7 @@ main包：可执行程序
 go standard:
 	archive:
 	bufio:
+		
 	builtin:
 		append(): 添加元素（切片扩容）
 		cap(): 容量
@@ -294,6 +295,13 @@ go standard:
 		list:
 		ring:
 	context:
+		Context:
+			Done():
+			Value():
+		AfterFunc():
+		WithCancel():
+		WithTimeout():
+		WithValue():
 	crypto:
 	database:
 		sql:
@@ -322,6 +330,8 @@ go standard:
 				Size():
 			WalkDirFunc:
 		ioutil:
+			ReadFile():
+			WriteFile():
 		Copy():
 		ReadAll():
 	log:
@@ -344,6 +354,8 @@ go standard:
 		http:
 		rpc:
 		url:
+		Conn:
+		Listen(): 监听
 	os:
 		exec:
 		signal:

@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "124b3dd7a7aabb21",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第三方库/logrus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c951232536f1d94b",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础/go.md",
+                "file": "第三方库/logrus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "基础/go.md",
+                "file": "第三方库/logrus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础/go.md"
+                "file": "第三方库/logrus.md"
               }
             }
           }
@@ -147,9 +159,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4b8febe550e7b8d0",
+  "active": "124b3dd7a7aabb21",
   "lastOpenFiles": [
-    "Gin/Gin.md",
-    "基础/go.md"
+    "第三方库/Gorm.md",
+    "第三方库/logrus.md",
+    "第三方库/gRPC.md",
+    "第三方库/Xorm.md",
+    "基础/go.md",
+    "Gin/Gin.md"
   ]
 }
