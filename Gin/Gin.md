@@ -24,7 +24,7 @@ gin:
 	Context:
 		Request: 
 		Writer:
-		Abort(): 中断处理
+		Abort(): 中断处理(请求链)
 		ClientIP():
 		DefaultPostForm():
 		DefaultQuery():
@@ -151,6 +151,15 @@ Default()生成的Engine默认注册了Logger()、Recovery()两个中间件
 
 
 ### 模板引擎
+
+
+#### 模板函数
+```
+模板函数:
+	and:
+	eq:
+	index:
+```
 
 
 
