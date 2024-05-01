@@ -290,6 +290,8 @@ go standard:
 		make(): 引用内存分配
 		string():
 	bytes:
+		Buffer:
+			Bytes():
 	cmp:
 	compress:
 	comtainer:
@@ -309,6 +311,7 @@ go standard:
 		sql:
 			driver:
 	debug:
+	embed: 文件嵌入
 	encoding:
 		json:
 			Marshal():
@@ -318,6 +321,7 @@ go standard:
 		New(): 新建错误
 	fmt:
 		Print():
+		Printf(): 格式化输出
 		Println():
 	hash:
 	html:
@@ -336,6 +340,7 @@ go standard:
 		ioutil:
 			ReadFile():
 			WriteFile():
+		MultiWriter: 复合输出器
 		Copy():
 		ReadAll():
 	log:
@@ -365,14 +370,18 @@ go standard:
 		signal:
 		user:
 		File:
-			
+		Stdout:
+		Writer:	
 		Create():
+		MkdirAll(): 多级目录创建
 		Open():
+		OpenFile():
 		ReadDir():
 	path:
 		filepath:
 			Walk():
 			WalkDir():
+		Base():
 	reflect:
 		Ptr:
 		Struct:
@@ -394,6 +403,8 @@ go standard:
 		syntax:
 	runtime:
 	sort:
+	strconv:
+		ParseInt():
 	strings:
 		Join():
 	sync:

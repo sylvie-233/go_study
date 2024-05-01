@@ -1,4 +1,4 @@
-# gRPC基础
+# gRPC
 
 > Author: Sylvie233
 >
@@ -6,15 +6,11 @@
 >
 > Point：
 
-[TOC]
-
 ## 基础介绍
 
 
 
-## gRPC库
-
-### grpc
+## 核心内容
 
 ```
 grpc:
@@ -22,4 +18,5 @@ grpc:
 	NewServer():
 	
 ```
+
 
