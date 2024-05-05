@@ -39,7 +39,7 @@ go命令:
     	-w: 设置环境变量
     get:
     	-u:
-    install:
+    install: 安装
     mod:
     	init:
     	tidy:
@@ -244,8 +244,12 @@ type Slice[T int | float32] []T
 
 类型:
 	any:
-	comparable:
+	comparable: 可比较类型
 ```
+
+
+#### 泛型约束
+
 
 
 
@@ -280,7 +284,11 @@ main包：可执行程序
 go standard:
 	archive:
 	bufio:
-		
+		Reader:
+			Read():
+			ReadByte():
+			ReadLine():
+		NewReader():
 	builtin:
 		append(): 添加元素（切片扩容）
 		cap(): 容量
@@ -346,6 +354,7 @@ go standard:
 	log:
 		slog:
 		syslog:
+		Println():
 	maps:
 	math:
 	mime:
@@ -361,16 +370,31 @@ go standard:
 				File:
 	net:
 		http:
+			Request:
+			ResponseWriter:
+			HandleFunc():
+			ListenAndServe():
 		rpc:
 		url:
 		Conn:
+		TcpAddr: 
+		TCPConn:
+			Read():
+			RemoteAddr():
+			Write():
+		TcpListener:
+			AcceptTCP:
+		DialTCP():
 		Listen(): 监听
+		ListenTCP():
+		ResolveTCPAddr():
 	os:
 		exec:
 		signal:
 		user:
 		File:
-		Stdout:
+		Stdin: 标准输入流
+		Stdout: 标准输出流
 		Writer:	
 		Create():
 		MkdirAll(): 多级目录创建
@@ -404,6 +428,7 @@ go standard:
 	runtime:
 	sort:
 	strconv:
+		Itoa():
 		ParseInt():
 	strings:
 		Join():

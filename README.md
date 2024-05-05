@@ -15,6 +15,7 @@
 - gorm
 - sqlx
 - go-redis
+- mongo
 
 
 ## 权限校验工具
@@ -32,13 +33,14 @@
 
 ## 字段校验工具
 
-- 
+- validator
 
 
 
 ## 网络请求工具
 
 - gRPC
+- websocket
 
 
 
