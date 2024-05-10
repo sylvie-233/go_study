@@ -390,6 +390,7 @@ go standard:
 		syntax:
 	runtime:
 	sort:
+	strconv:
 	strings:
 		Join():
 	sync:
