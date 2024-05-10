@@ -296,6 +296,8 @@ go standard:
 		copy(): 拷贝
 		len(): 长度
 		make(): 引用内存分配
+		print():
+		println():
 		string():
 	bytes:
 		Buffer:
@@ -422,7 +424,7 @@ go standard:
 			Elem(): 指针取值
 			Kind():
 			NumField():
-		TypeOf():
+		TypeOf(): 获取对象Type
 	regexp:
 		syntax:
 	runtime:
@@ -434,9 +436,13 @@ go standard:
 		Join():
 	sync:
 		atomic:
+			LoadUnit32(): 原子获取值
+			StoreUnit32(): 原子设置值
 		Mutex:
 			Lock():
 			Unlock():
+		Once: 只执行一次
+			Do(): 
 		RWMutex:
 		WaitGroup:
 			Down():
@@ -726,13 +732,13 @@ time:
 	创建型：（5）
 		1.工厂方法模式：对于每一种具体的类型有个对应的工厂
 		2.抽象工厂模式
-		3.单例模式
+		3.单例模式：饿汉、懒汉
 		4.建造者模式：Builder
 		5.原型模式：类似javascript的原型链
 	结构型：（7）
 		6.适配器模式
-		7.装饰器模式
-		8.代理模式
+		7.装饰器模式：类似代理，实现统一个接口，持有具体实现（扩展方法，最终为接口类型）
+		8.代理模式：代理实现同一个接口，持有具体实现
 		9.外观模式
 		10.桥接模式
 		11.组合模式
