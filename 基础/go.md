@@ -39,7 +39,7 @@ go命令:
     	-w: 设置环境变量
     get:
     	-u:
-    install:
+    install: 安装
     mod:
     	init:
     	tidy:
@@ -208,6 +208,8 @@ main函数入口
 ### 结构体
 
 
+通过匿名字段组合实现继承
+
 
 
 
@@ -242,8 +244,12 @@ type Slice[T int | float32] []T
 
 类型:
 	any:
-	comparable:
+	comparable: 可比较类型
 ```
+
+
+#### 泛型约束
+
 
 
 
@@ -278,7 +284,11 @@ main包：可执行程序
 go standard:
 	archive:
 	bufio:
-		
+		Reader:
+			Read():
+			ReadByte():
+			ReadLine():
+		NewReader():
 	builtin:
 		append(): 添加元素（切片扩容）
 		cap(): 容量
@@ -288,6 +298,8 @@ go standard:
 		make(): 引用内存分配
 		string():
 	bytes:
+		Buffer:
+			Bytes():
 	cmp:
 	compress:
 	comtainer:
@@ -307,6 +319,7 @@ go standard:
 		sql:
 			driver:
 	debug:
+	embed: 文件嵌入
 	encoding:
 		json:
 			Marshal():
@@ -316,9 +329,12 @@ go standard:
 		New(): 新建错误
 	fmt:
 		Print():
+		Printf(): 格式化输出
 		Println():
 	hash:
 	html:
+		template:
+			FuncMap:
 	image:
 	io:
 		fs:
@@ -332,11 +348,13 @@ go standard:
 		ioutil:
 			ReadFile():
 			WriteFile():
+		MultiWriter: 复合输出器
 		Copy():
 		ReadAll():
 	log:
 		slog:
 		syslog:
+		Println():
 	maps:
 	math:
 	mime:
@@ -352,23 +370,42 @@ go standard:
 				File:
 	net:
 		http:
+			Request:
+			ResponseWriter:
+			HandleFunc():
+			ListenAndServe():
 		rpc:
 		url:
 		Conn:
+		TcpAddr: 
+		TCPConn:
+			Read():
+			RemoteAddr():
+			Write():
+		TcpListener:
+			AcceptTCP:
+		DialTCP():
 		Listen(): 监听
+		ListenTCP():
+		ResolveTCPAddr():
 	os:
 		exec:
 		signal:
 		user:
 		File:
-			
+		Stdin: 标准输入流
+		Stdout: 标准输出流
+		Writer:	
 		Create():
+		MkdirAll(): 多级目录创建
 		Open():
+		OpenFile():
 		ReadDir():
 	path:
 		filepath:
 			Walk():
 			WalkDir():
+		Base():
 	reflect:
 		Ptr:
 		Struct:
@@ -391,6 +428,8 @@ go standard:
 	runtime:
 	sort:
 	strconv:
+		Itoa():
+		ParseInt():
 	strings:
 		Join():
 	sync:
@@ -678,4 +717,37 @@ time:
  
 
 ## 补充知识
+
+
+### 设计模式
+
+```
+设计模式：（23）
+	创建型：（5）
+		1.工厂方法模式：对于每一种具体的类型有个对应的工厂
+		2.抽象工厂模式
+		3.单例模式
+		4.建造者模式：Builder
+		5.原型模式：类似javascript的原型链
+	结构型：（7）
+		6.适配器模式
+		7.装饰器模式
+		8.代理模式
+		9.外观模式
+		10.桥接模式
+		11.组合模式
+		12.享元模式
+	行为型：（11）
+		13.策略模式
+		14.模板方法模式
+		15.观察者模式
+		16.迭代器模式
+		17.责任链模式
+		18.命令模式
+		19.备忘录模式
+		20.状态模式
+		21.访问者模式
+		22.中介者模式
+		23.解释器模式
+```
 
