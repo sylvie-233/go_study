@@ -4,7 +4,7 @@
 >
 > Date: 22/12/26
 >
-> Point：
+> Point：Golang深入理解GPM模型：P9
 > 	
 
 
@@ -259,6 +259,11 @@ type Slice[T int | float32] []T
 
 ### Goroutine协程
 
+
+#### GMP模型
+
+
+M0、G0
 
 
 
